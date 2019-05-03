@@ -11,6 +11,8 @@ public class AudioTrackerBehavior : MonoBehaviour {
     public FloatVariable SpecrumLow;
     public FloatVariable SpecrumMid;
     public FloatVariable SpecrumHigh;
+
+    public Vector3Variable SpecrumLMH;
     // Start is called before the first frame update
     void Start () { }
 
@@ -19,5 +21,6 @@ public class AudioTrackerBehavior : MonoBehaviour {
         SpecrumLow.SetValue (lowInput);
         SpecrumMid.SetValue (midInput);
         SpecrumHigh.SetValue (highInput);
+        SpecrumLMH.SetValue( new Vector3(lowInput, midInput, highInput) );
     }
 }
